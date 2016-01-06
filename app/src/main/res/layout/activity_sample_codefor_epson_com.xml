@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/blue_gradient"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/title"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold|italic"
+                android:typeface="serif"></TextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/medium_gray"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Connection"
+                    android:textColor="#FF000000"
+                    android:textSize="10dp"
+                    android:textStyle="italic"
+                    android:typeface="serif"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/buttonOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="openButtonClicked"
+                        android:text="Open"></Button>
+
+                    <Button
+                        android:id="@+id/buttonClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="closeButtonClicked"
+                        android:text="Close"></Button>
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinnerPortType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.31"
+                    android:prompt="@string/porttype_prompt"></Spinner>
+
+                <EditText
+                    android:id="@+id/editTextIPAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="true"
+                    android:text="192.168.10.188">
+
+                    <requestFocus></requestFocus>
+                </EditText>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:text="Port Status:"
+                            android:textColor="#FF000000"></TextView>
+
+                        <TextView
+                            android:id="@+id/textViewOpen"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Open"
+                            android:textColor="#FF000000"></TextView>
+
+                        <TextView
+                            android:id="@+id/textViewClosed"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Closed"
+                            android:textColor="#FF000000"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:text="Printer Status:"
+                            android:textColor="#FF000000"></TextView>
+
+                        <TextView
+                            android:id="@+id/textViewASBOnline"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/medium_gray"
+                            android:gravity="center_horizontal"
+                            android:text="Online"
+                            android:textColor="#FF000000"></TextView>
+
+                        <TextView
+                            android:id="@+id/textViewASBCover"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/medium_gray"
+                            android:gravity="center_horizontal"
+                            android:text="Cover"
+                            android:textColor="#FF000000"></TextView>
+
+                        <TextView
+                            android:id="@+id/textViewASBPaper"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/medium_gray"
+                            android:gravity="center_horizontal"
+                            android:text="Paper"
+                            android:textColor="#FF000000"></TextView>
+
+                        <TextView
+                            android:id="@+id/textViewASBSlip"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/medium_gray"
+                            android:gravity="center_horizontal"
+                            android:text="Slip"
+                            android:textColor="#FF000000"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/medium_gray"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receipt and Slip Printing"
+                    android:textColor="#FF000000"
+                    android:textSize="10dp"
+                    android:textStyle="italic"
+                    android:typeface="serif"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/buttonPrintString"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="printStringButtonClicked"
+                        android:text="Print String"></Button>
+
+                    <EditText
+                        android:id="@+id/editTextPrintString"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:freezesText="true"></EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Print Station:"
+                        android:textColor="#FF000000"></TextView>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupPrintStation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.0"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioReceipt"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:checked="true"
+                            android:text="Receipt"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioSlipFront"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Slip Front"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioSlipBack"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Slip Back"
+                            android:textColor="#FF000000"></RadioButton>
+                    </RadioGroup>
+
+                    <View
+                        android:id="@+id/linearLayout8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.00"></View>
+
+                    <Button
+                        android:id="@+id/buttonCancelWaitForSlip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:onClick="cancelWaitForSlipButtonClicked"
+                        android:text="Cancel Wait for Slip"></Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Printer Font:"
+                        android:textColor="#FF000000"></TextView>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_gray"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioFontA"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:checked="true"
+                            android:text="Font A"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioFontB"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Font B"
+                            android:textColor="#FF000000"></RadioButton>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.00">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxBold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="Bold"
+                            android:textColor="#FF000000"></CheckBox>
+
+                        <CheckBox
+                            android:id="@+id/checkBoxUnderlined"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="Underlined"
+                            android:textColor="#FF000000"></CheckBox>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonEjectSlip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:onClick="ejectSlipButtonClicked"
+                        android:text="Eject Slip"></Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Print Alignment:"
+                        android:textColor="#FF000000"></TextView>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupAlignment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_gray"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioLeft"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:checked="true"
+                            android:text="Left"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioCenter"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Center"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioRight"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Right"
+                            android:textColor="#FF000000"></RadioButton>
+                    </RadioGroup>
+
+                    <View
+                        android:id="@+id/linearLayout18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.01"></View>
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:onClick="cutPaperButtonClicked"
+                        android:text="Cut Paper"></Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="Character Size:"
+                        android:textColor="#FF000000"></TextView>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupDoublePrint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_gray"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioX1Y1"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:checked="true"
+                            android:text="Standard"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioX2Y1"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Double Width"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioX1Y2"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Double Height"
+                            android:textColor="#FF000000"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioX2Y2"
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:text="Double W+H"
+                            android:textColor="#FF000000"></RadioButton>
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout20"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout30"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/medium_gray"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Scanning"
+                    android:textColor="#FF000000"
+                    android:textSize="10dp"
+                    android:textStyle="italic"
+                    android:typeface="serif"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout31"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/buttonReadMICRScan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="readMICRScanButtonClicked"
+                        android:text="Read MICR+Scan"></Button>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="MICR Text:"
+                        android:textColor="#FF000000"></TextView>
+
+                    <TextView
+                        android:id="@+id/textViewMICRString"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/light_gray"
+                        android:freezesText="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textColor="#FF000000"
+                        android:textSize="20dp"></TextView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewCheck"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/dark_gray"></ImageView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
