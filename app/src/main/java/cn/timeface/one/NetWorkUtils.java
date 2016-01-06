@@ -50,17 +50,6 @@ public class NetWorkUtils {
      */
     public static String getLocalIpAddress(Context context) {
         try {
-            // for (Enumeration<NetworkInterface> en = NetworkInterface
-            // .getNetworkInterfaces(); en.hasMoreElements();) {
-            // NetworkInterface intf = en.nextElement();
-            // for (Enumeration<InetAddress> enumIpAddr = intf
-            // .getInetAddresses(); enumIpAddr.hasMoreElements();) {
-            // InetAddress inetAddress = enumIpAddr.nextElement();
-            // if (!inetAddress.isLoopbackAddress()) {
-            // return inetAddress.getHostAddress().toString();
-            // }
-            // }
-            // }
             WifiManager wifiManager = (WifiManager) context
                     .getSystemService(Context.WIFI_SERVICE);
             WifiInfo wifiInfo = wifiManager.getConnectionInfo();
@@ -69,6 +58,5 @@ public class NetWorkUtils {
         } catch (Exception ex) {
             return " 获取IP出错鸟!!!!请保证是WIFI,或者请重新打开网络!\n" + ex.getMessage();
         }
-        // return null;
     }
 }
